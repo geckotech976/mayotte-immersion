@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mayotte Immersion - Ateliers Culturels Mahorais</title>
+    <meta name="description" content="Découvrez nos ateliers immersifs au cœur de la culture mahoraise : beauté, poterie, broderie, bien-être traditionnel et tressage.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Phosphor Icons (Léger et moderne) -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- Overlay Panier/Modale -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="#" class="logo">
+                <span class="logo-title">MAYOTTE IMMERSION</span>
+                <span class="logo-subtitle">CARIBOU</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#ateliers">Nos Ateliers</a></li>
+                <li><a href="#avis">Avis</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="cart-btn" id="open-cart-btn">
+                <i class="ph ph-shopping-bag"></i>
+                <span class="cart-count" id="cart-count">0</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Héro Banner -->
+    <header id="accueil" class="hero">
+        <div class="hero-image" style="background-image: url('assets/img/hero_beach.png');"></div>
+        <div class="hero-content">
+            <h1>Plongez au cœur de l'âme mahoraise</h1>
+            <p>Découvrez nos ateliers immersifs et laissez-vous guider par les traditions ancestrales de l'île aux parfums.</p>
+            <a href="#ateliers" class="btn btn-primary">Découvrir les Ateliers</a>
+        </div>
+    </header>
+
+    <!-- Ateliers Section -->
+    <section id="ateliers" class="section">
+        <div class="container">
+            <h2 class="section-title">Nos Ateliers Immersifs</h2>
+            <p class="section-subtitle">Sélectionnez une prestation pour en savoir plus ou réserver votre place.</p>
+            
+            <div class="grid-ateliers">
+                <!-- Atelier 1 -->
+                <article class="atelier-card">
+                    <div class="atelier-img" style="background-image: url('assets/img/beauty_mask.png');"></div>
+                    <div class="atelier-content">
+                        <h3>Beauté Mahoraise (Msindzano)</h3>
+                        <p>Fabrication et application du masque de beauté traditionnel au bois de santal.</p>
+                        <div class="atelier-footer">
+                            <span class="price">35.00 €</span>
+                            <button class="btn btn-outline reserve-btn" data-id="1" data-title="Beauté Mahoraise" data-price="35.00">Réserver</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Atelier 2 -->
+                <article class="atelier-card">
+                    <div class="atelier-img" style="background-image: url('assets/img/poterie.jpg');"></div>
+                    <div class="atelier-content">
+                        <h3>Poterie Traditionnelle</h3>
+                        <p>Apprenez à modeler l'argile selon les techniques anciennes transmises par nos aînées.</p>
+                        <div class="atelier-footer">
+                            <span class="price">45.00 €</span>
+                            <button class="btn btn-outline reserve-btn" data-id="2" data-title="Poterie Traditionnelle" data-price="45.00">Réserver</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Atelier 3 -->
+                <article class="atelier-card">
+                    <div class="atelier-img" style="background-image: url('assets/img/broderie.jpg');"></div>
+                    <div class="atelier-content">
+                        <h3>Broderie Artisanale</h3>
+                        <p>Initiation à la broderie de motifs traditionnels colorés pour personnaliser vos tissus.</p>
+                        <div class="atelier-footer">
+                            <span class="price">30.00 €</span>
+                            <button class="btn btn-outline reserve-btn" data-id="3" data-title="Broderie Artisanale" data-price="30.00">Réserver</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Atelier 4 -->
+                <article class="atelier-card">
+                    <div class="atelier-img" style="background-image: url('assets/img/massage.jpg');"></div>
+                    <div class="atelier-content">
+                        <h3>Bien-être & Massages</h3>
+                        <p>Un moment de pure relaxation avec des huiles exotiques et techniques traditionnelles.</p>
+                        <div class="atelier-footer">
+                            <span class="price">60.00 €</span>
+                            <button class="btn btn-outline reserve-btn" data-id="4" data-title="Bien-être & Massages" data-price="60.00">Réserver</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Atelier 5 -->
+                <article class="atelier-card">
+                    <div class="atelier-img" style="background-image: url('assets/img/tressage.jpg');"></div>
+                    <div class="atelier-content">
+                        <h3>Tressage de Panier</h3>
+                        <p>Création d'un panier en feuilles de cocotier avec l'aide de nos artisans experts.</p>
+                        <div class="atelier-footer">
+                            <span class="price">40.00 €</span>
+                            <button class="btn btn-outline reserve-btn" data-id="5" data-title="Tressage de Panier" data-price="40.00">Réserver</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Avis Section -->
+    <section id="avis" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Ce que disent nos visiteurs</h2>
+            <div class="reviews-wrapper">
+                <div class="reviews-list" id="reviews-list">
+                    <!-- Avis factices initiaux -->
+                    <div class="review-card">
+                        <div class="review-stars"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+                        <p class="review-text">"L'atelier beauté Msindzano était incroyable. Une immersion totale et des formatrices adorables. Je recommande !"</p>
+                        <h4 class="review-author">Sarah M.</h4>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-stars"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph ph-star"></i></div>
+                        <p class="review-text">"Superbe expérience de poterie. On apprend vraiment les gestes d'autrefois. Le cadre est magnifique."</p>
+                        <h4 class="review-author">Thomas L.</h4>
+                    </div>
+                </div>
+
+                <div class="review-form-container">
+                    <h3>Laissez votre avis</h3>
+                    <form id="review-form">
+                        <input type="text" id="review-name" placeholder="Votre nom" required>
+                        <select id="review-rating" required>
+                            <option value="5">5 Étoiles - Excellent</option>
+                            <option value="4">4 Étoiles - Très bien</option>
+                            <option value="3">3 Étoiles - Bien</option>
+                            <option value="2">2 Étoiles - Moyen</option>
+                            <option value="1">1 Étoile - Décevant</option>
+                        </select>
+                        <textarea id="review-text" rows="4" placeholder="Votre commentaire sur l'atelier..." required></textarea>
+                        <button type="submit" class="btn btn-primary w-100">Publier l'avis</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h2>MAYOTTE IMMERSION</h2>
+                    <p>CARIBOU</p>
+                    <p class="mt-2 text-sm">Votre porte d'entrée vers les traditions et la culture authentique de l'île aux parfums.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Liens Rapides</h3>
+                    <ul>
+                        <li><a href="#accueil">Accueil</a></li>
+                        <li><a href="#ateliers">Nos Ateliers</a></li>
+                        <li><a href="#avis">Avis</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact</h3>
+                    <p><i class="ph ph-map-pin"></i> 97600 Mamoudzou, Mayotte</p>
+                    <p><i class="ph ph-envelope-simple"></i> contact@mayotte-immersion.yt</p>
+                    <p><i class="ph ph-phone"></i> +262 269 12 34 56</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 Mayotte Immersion - Tous droits réservés.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Booking Modal -->
+    <div class="modal" id="booking-modal">
+        <button class="close-modal"><i class="ph ph-x"></i></button>
+        <h3 id="modal-title">Réserver l'atelier</h3>
+        <p class="mb-4 text-sm text-gray">Veuillez choisir une date pour l'atelier sélectionné.</p>
+        <form id="booking-form">
+            <input type="hidden" id="booking-id">
+            <input type="hidden" id="booking-price">
+            <div class="form-group">
+                <label for="booking-date">Date de réservation :</label>
+                <input type="date" id="booking-date" required>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Ajouter au panier</button>
+        </form>
+    </div>
+
+    <!-- Cart Drawer -->
+    <aside class="cart-drawer" id="cart-drawer">
+        <div class="cart-header">
+            <h3>Votre Panier</h3>
+            <button class="close-cart"><i class="ph ph-x"></i></button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Items injectés par JS -->
+            <div class="empty-cart-msg">Votre panier est vide.</div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total :</span>
+                <span id="cart-total-price">0.00 €</span>
+            </div>
+            <button class="btn btn-primary w-100" id="checkout-btn" disabled>Passer au paiement</button>
+        </div>
+    </aside>
+
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
